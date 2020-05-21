@@ -1,0 +1,298 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+ caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 20px;
+    color: #ffffff;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    background-color: #dabfe8;
+
+}
+
+title {
+    font: 30px 'Comic Sans MS', 'Times New Roman', Georgia, monospace;
+    color: rgba(232, 157, 231, 0.56);
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+body {
+    font: 13px/20px 'Comic Sans MS', 'Times New Roman', Georgia, monospace;
+    color: #e3c99e;
+}
+
+.container {
+    zoom: 1;
+}
+
+.container:before, .container:after {
+    content: '';
+    display: table;
+}
+
+.container:after {
+    clear: both;
+}
+
+.column {
+    position: relative;
+    z-index: 1;
+    float: left;
+    width: 25%;
+    padding: 30px 0;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.column .button + .button {
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .column {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.button {
+    display: inline-block;
+    position: relative;
+    height: 33px;
+    line-height: 33px;
+    padding: 0 15px;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+    border: 2px solid;
+    border-radius: 7px;
+    outline: 0;
+    -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+.button:before, .button:after {
+    content: '';
+    position: absolute;
+}
+
+.button:before {
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    z-index: -1;
+    border-radius: 9px;
+}
+
+.button:after {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 0;
+    border-radius: 7px;
+}
+
+.button.alt {
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.button.alt:before {
+    display: none;
+}
+
+.column.red {
+    background: #d04022;
+}
+
+.button.red {
+    background: #d02e17;
+    border-color: #942110 #902010 #741a0d;
+    background-image: -webkit-linear-gradient(top, #e6451b 50%, #d02e17 50%, #b3150b);
+    background-image: -moz-linear-gradient(top, #e6451b 50%, #d02e17 50%, #b3150b);
+    background-image: -o-linear-gradient(top, #e6451b 50%, #d02e17 50%, #b3150b);
+    background-image: linear-gradient(to bottom, #e6451b 50%, #d02e17 50%, #b3150b);
+    color: #fff; /* цвет текста */
+    text-decoration: none; /* убирать подчёркивание у ссылок */
+    user-select: none; /* убирать выделение текста */
+    outline: none; /* убирать контур в Mozilla */
+}
+.button.red:hover { background: rgb(210, 232, 97); } /* при наведении курсора мышки */
+
+.button.red:before {
+    background: #ee442c;
+    background-image: -webkit-linear-gradient(top, #b32511, #f3533c);
+    background-image: -moz-linear-gradient(top, #b32511, #f3533c);
+    background-image: -o-linear-gradient(top, #b32511, #f3533c);
+    background-image: linear-gradient(to bottom, #b32511, #f3533c);
+}
+
+.button.red:active {
+    background: #e63b1b;
+    background-image: -webkit-linear-gradient(top, #a9110b, #de3819 60%, #e63b1b);
+    background-image: -moz-linear-gradient(top, #a9110b, #de3819 60%, #e63b1b);
+    background-image: -o-linear-gradient(top, #a9110b, #de3819 60%, #e63b1b);
+    background-image: linear-gradient(to bottom, #a9110b, #de3819 60%, #e63b1b);
+
+}
+
+.button.red:active:after {
+    border-color: #e63b1b;
+}
+
+.column.green {
+    background: #429538;
+}
+
+
+.button.green {
+    border-color: #326e00 #006805 #00570b;
+    background: #4ac233;
+    background-image: -webkit-linear-gradient(top, #317c22, #52d039);
+    background-image: -moz-linear-gradient(top, #317c22, #52d039);
+    background-image: -o-linear-gradient(top, #317c22, #52d039);
+    background-image: linear-gradient(to bottom, #317c22, #52d039);
+
+    color: #fff; /* цвет текста */
+    text-decoration: none; /* убирать подчёркивание у ссылок */
+    user-select: none; /* убирать выделение текста */
+    outline: none; /* убирать контур в Mozilla */
+}
+.button.green:hover { background: rgb(210, 232, 97); } /* при наведении курсора мышки */
+
+.button.green:before {
+    background: #4ac233;
+    background-image: -webkit-linear-gradient(top, #317c22, #52d039);
+    background-image: -moz-linear-gradient(top, #317c22, #52d039);
+    background-image: -o-linear-gradient(top, #317c22, #52d039);
+    background-image: linear-gradient(to bottom, #317c22, #52d039);
+}
+
+.button.green:active {
+    background: #42a933;
+    background-image: -webkit-linear-gradient(top, #31741b, #3fa131 60%, #42a933);
+    background-image: -moz-linear-gradient(top, #31741b, #3fa131 60%, #42a933);
+    background-image: -o-linear-gradient(top, #31741b, #3fa131 60%, #42a933);
+    background-image: linear-gradient(to bottom, #31741b, #3fa131 60%, #42a933);
+}
+
+.button.green:active:after {
+    border-color: #42a933;
+}
+
+.column.brown {
+    background: #c542aa;
+}
+
+.button.brown {
+    color: #fff; /* цвет текста */
+    text-decoration: none; /* убирать подчёркивание у ссылок */
+    user-select: none; /* убирать выделение текста */
+    background: rgb(232, 79, 230); /* фон кнопки */
+    background-image: -webkit-linear-gradient(top, #8846ae, #e89de7);
+    background-image: -moz-linear-gradient(top, #8c5aae, #e39cd1);
+    background-image: -o-linear-gradient(top, #9176ae, #e1b7e3);
+    background-image: linear-gradient(to bottom, #8044ae, #e382cd);
+    padding: .7em 1.5em; /* отступ от текста */
+    outline: none; /* убирать контур в Mozilla */
+}
+.button.brown:hover { background: rgb(224, 113, 232); } /* при наведении курсора мышки */
+
+.button.brown:before {
+    background: #dcb94d;
+    background-image: -webkit-linear-gradient(top, #ae8c24, #e3c15b);
+    background-image: -moz-linear-gradient(top, #ae8c24, #e3c15b);
+    background-image: -o-linear-gradient(top, #ae8c24, #e3c15b);
+    background-image: linear-gradient(to bottom, #ae8c24, #e3c15b);
+}
+
+.button.brown:active {
+    background: #d2b33d;
+    background-image: -webkit-linear-gradient(top, #a6791d, #d0af35 60%, #d2b33d);
+    background-image: -moz-linear-gradient(top, #a6791d, #d0af35 60%, #d2b33d);
+    background-image: -o-linear-gradient(top, #a6791d, #d0af35 60%, #d2b33d);
+    background-image: linear-gradient(to bottom, #a6791d, #d0af35 60%, #d2b33d);
+}
+
+.button.brown:active:after {
+    border-color: #d2b33d;
+}
+
+.column.gray {
+    background: #9e9e9e;
+}
+
+.button.gray {
+    color: #fff; /* цвет текста */
+    text-decoration: none; /* убирать подчёркивание у ссылок */
+    user-select: none; /* убирать выделение текста */
+    background: #b6afaf;
+    background-image: -webkit-linear-gradient(top, #8b8484, #c2b7b7);
+    background-image: -moz-linear-gradient(top, #8b8484, #c2b7b7);
+    background-image: -o-linear-gradient(top, #8b8484, #c2b7b7);
+    background-image: linear-gradient(to bottom, #8b8484, #c2b7b7);
+    padding: .7em 1.5em; /* отступ от текста */
+    outline: none; /* убирать контур в Mozilla */
+}
+.button.gray:hover { background: rgb(194, 158, 232); } /* при наведении курсора мышки */
+
+.button.gray:before {
+    background: #b6afaf;
+    background-image: -webkit-linear-gradient(top, #8b8484, #c2b7b7);
+    background-image: -moz-linear-gradient(top, #8b8484, #c2b7b7);
+    background-image: -o-linear-gradient(top, #8b8484, #c2b7b7);
+    background-image: linear-gradient(to bottom, #8b8484, #c2b7b7);
+}
+
+.button.gray:active {
+    background: #a6a6a6;
+    background-image: -webkit-linear-gradient(top, #7c278a, #8b47a1 60%, #a64c99);
+    background-image: -moz-linear-gradient(top, #6f228a, #9856a1 60%, #a66d9c);
+    background-image: -o-linear-gradient(top, #855f8a, #8a54a1 60%, #a345a6);
+    background-image: linear-gradient(to bottom, #786d8a, #915ca1 60%, #9a2ba6);
+}
+
+.button.gray:active:after {
+    border-color: #a6a6a6;
+}
+
+.lt-ie9 .button:before {
+    display: none;
+}
